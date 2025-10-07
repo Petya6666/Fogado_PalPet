@@ -20,7 +20,7 @@ app.get("/fogado", (req, res) => {
         if (err) return res.json(err);
         return res.json(result)
     })
-})
+});
 
 
 app.get("/kihasznaltsag", (req, res) => {
@@ -49,9 +49,11 @@ app.get("/foglaltsag", (req, res) => {
 
 app.get('/ping', (req, res) => {
     res.json("Fut a backend");
-    }   );
+    }   
+);
 
 
 app.listen(3001, () => {
-    console.log("A szerver a  3001-es porton fut");
-    });
+    console.log("Fut a szerver 3001-es porton");
+    
+});
