@@ -54,6 +54,6 @@ app.get('/ping', (req, res) => {
 
 
 app.listen(3001, () => {
-    console.log("Fut a szerver 3001-es porton");
+    console.log("Fut a szerver 3001-es porton");    
     
 });
