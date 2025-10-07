@@ -23,6 +23,30 @@ app.get("/fogado", (req, res) => {
 })
 
 
+app.get("/kihasznaltsag", (req, res) => {
+    const sql = "SELECT szoba, COUNT(vendeg) AS vendegek, SUM(DATEDIFF(tav, erk)) AS vendegejszakak FROM foglalasok GROUP BY szoba ORDER BY vendegejszakak ASC, vendegek ASC;";
+    db.query(sql, (err, result) => {
+    if (err) return res.json(err);
+    return res.json(result)
+    })
+});
+
+
+app.get("/foglaltsag", (req, res) => {
+    const sql = `
+        SELECT vnev AS név, erk AS érkezés, tav AS távozás  
+        FROM foglalasok 
+        JOIN vendegek  ON vendeg = vsorsz
+        WHERE szoba IN (SELECT szoba FROM szobak) 
+        ORDER BY vnev ASC;
+    `;
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
+
 app.get('/ping', (req, res) => {
     res.json("Fut a backend");
     }   );
