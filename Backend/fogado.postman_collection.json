@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "fe7c4380-e8e3-48b9-aa2f-151a154c370a",
+		"name": "fogado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41645692"
+	},
+	"item": [
+		{
+			"name": "a feladat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/fogado",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"fogado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "b feladat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/kihasznaltsag",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"kihasznaltsag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "c feladat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/foglaltsag",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"foglaltsag"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
