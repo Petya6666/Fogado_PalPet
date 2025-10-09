@@ -76,3 +76,12 @@ a {
   visibility:hidden;
 }
 
+.feher{
+  background-color: white;
+}
+.kep img{
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
