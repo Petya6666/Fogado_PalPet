@@ -24,6 +24,7 @@ function App() {
           <p>
             A falusi szálláshelyek napraforgós Nemzeti Tanúsító Védjegye a FATOSZ által több mint tíz éve létrehozott, és működtetett minősítési rendszer alapjaira épülve 2011 óta a minőségi falusi turizmus szimbóluma...
           </p>
+          <img src="" alt="" />
         </div>
 
         <div className='feher'>
