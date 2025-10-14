@@ -27,8 +27,11 @@ body{
 }
 
 .bg-torzs {
-  align-content: center;
+  text-align: center;
   background-color: #C5C599;
+  width: 33%;
+  display: inline-block;
+  
 }
 .logo {
   opacity: 0.8; 

@@ -19,46 +19,63 @@ function App() {
         <img src="./img/top.jpg" alt="" />
       </div>
       <div>
-        <div className='bg-torzs'>
+        <div class='bg-torzs'>
           <h3>Napraforgós Nemzeti Tanúsító Védjegy célja</h3>
           <p>
             A falusi szálláshelyek napraforgós Nemzeti Tanúsító Védjegye a FATOSZ által több mint tíz éve létrehozott, és működtetett minősítési rendszer alapjaira épülve 2011 óta a minőségi falusi turizmus szimbóluma...
           </p>
-          <img src="" alt="" />
+          <a href="https://fatosz.hu/falusi-szallashely-minosites/">Tájékozató oldal</a>
+
+          <img className='logo' src="./img/logo.png" alt="" />
         </div>
 
-        <div className='feher'>
+        <div class='bg-torzs'>
           <h3>Falusi szálláshely fajtái:</h3>
           <ul>
-            <li>Vendégszoba...</li>
-            <li>Lakrész...</li>
-            <li>Vendégház...</li>
-            <li>Sátorozóhely...</li>
+          <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből, és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
+          <li>Lakrész: önálló épület kettő, illetve több szobából álló lehatárolt része a minősítéstől függően hozzátartozó mellékhelyiségekkel együtt</li>
+          <li>Vendégház: önálló épület, több szobával, mellékhelyiségekkel és főzési lehetőséggel rendelkező lakó-, illetve üdülőegység, családok vagy kisebb csoportok elszállásolására.</li>
+          <li>Sátorozóhely: csak valamelyik falusi szálláshely típus mellett, mintegy azt kiegészítve üzemeltethető az előírt feltételek megléte esetén. Pl.: falusi vendégház sátorozóhellyel.</li>
           </ul>
             <img src="./img/ketagyas.jpg" />
           </div>
 
-        <div className='bg-torzs'>
-          <h3>A hét törpe fogadó</h3>
-          <ul>
-            <li>Ruhásszekrény</li>
-            <li>Saját fürdőszoba zuhanytálca</li>
-            <li>WC (fürdőszobával egyben)</li>
-          </ul>
+        <div class='bg-torzs'>
+          
+<div className="contentbox" id="contbx3">
+            <h3>A hét törpe fogadó</h3>
+            <table className="table table-striped" id="fogado-table">
+              <thead>
+                <tr>
+                  <th id="custom-cell">Szoba neve</th>
+                  <th id="custom-cell">Ágyak száma</th>
+                </tr>
+              </thead>
+              <tbody>
+                {szobak.map((room, i) => (
+                  <tr id="custom-cell" key={i}>
+                    <td id="custom-cell">{room['Szobanév']}</td>
+                    <td id="custom-cell">{room['Ágyak száma']}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p>
+              A házban összesen 21 fő fér el. <br />
+              Felszereltségük:
+            </p>
+            <ol>
+              <li>Ruhásszekrény</li>
+              <li>Saját fürdőszoba zuhanytálca</li>
+              <li>WC (fürdőszobával egyben)</li>
+            </ol>
+            <div id="box3adjust"></div>
+          </div>
+
         </div>
 
-        <div className='bg-torzs'>
-          <h3>Szobák listája</h3>
-          <ul>
-            {szobak.map(szoba => (
-              <li key={szoba.szoba}>
-                Szoba: {szoba.szoba}, Típus: {szoba.tipus}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className='bg-torzs'>
+       
+        <div className=''>
           <h3>A vendégszobák foglaltsága</h3>
           <ul>
             {foglaltsag.map(f => (
@@ -69,7 +86,7 @@ function App() {
           </ul>
         </div>
 
-        <div className='bg-torzs'>
+        <div className=''>
           <h3>A szobák kihasználtsága</h3>
           <ul>
             {kihasznaltsag.map(k => (
